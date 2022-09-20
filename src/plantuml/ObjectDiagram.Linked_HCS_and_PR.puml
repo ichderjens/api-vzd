@@ -1,0 +1,21 @@
+@startuml ObjectDiagram.Linked_HCS_and_PR
+'skinparam monochrome true
+object "HealthcareService" as hs1
+object "PractitionerRole" as pr1
+object "Organization" as o1
+object "Location" as l1
+object "Endpoint 1" as e1 #LightPink
+object "Practitioner" as p1
+object "Endpoint 2" as e2
+
+hs1 o-- o1
+hs1 o-- l1
+hs1 o-- e1
+
+pr1 o-- p1
+pr1 o-- l1
+pr1 o-- e2
+pr1 o-- e1 #IndianRed
+pr1 o-l- hs1 #IndianRed
+
+@enduml
