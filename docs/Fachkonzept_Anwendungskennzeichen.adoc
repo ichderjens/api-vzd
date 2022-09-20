@@ -35,9 +35,10 @@ image::gematik_logo.svg[gematik,float="right"]
 - Pflege soll durch PS erfolgen (entweder per OIDC Auth und Direktzugriff auf den FHIR-Proxy oder alternativ Konfig-Mail an den KIM-Anbieter und Pflege über REST-Schnittstelle), weil nur das PS weiß, welche KIM Anwendungen unterstützt werden. Auch im Self-Service-Portal soll der Nutzer zuordnen können, welche KIM-Adresse für welche KIM-Anwendung genutzt wird
 - Mehrere Arbeitsplätze des PS müssen unterschieden werden können. Vorschlag: im Endpoint.name wird kodiert <PS-name;PS-Version;PS-NutzerID?>
 - Verknüpfung Practitioner zu Organisation im Self-Service-Portal (SSP) mit Bestätigungsabfrage (Beispiel Arzt verknüpft sich mit Arztpraxis; Arztpraxis muss bestätigen, dass die Verknüpfung gewünscht ist). Bestätigung kann über das SSP erfolgen oder per TIM-Bot, wenn das SSP auch eine TIM-Adresse bekommt
-- Die Verlinkung von PractitionerRole mit HealthcareService und HealthcareService.endpoint kann gleichzeitig erfolgen.
+- Die Verlinkung von Organisations-Einträgen mit Practitioner-Einträgen kann gleichzeitig erfolgen. Die Organisation oder der Practitioner kann die Verlinkung anfordern. Die Verlinkung wird aber erst nach Bestätigung durch die verlinkte Seite (Organisation oder Practitioner) aktiv.
 
-image::diagrams/ObjectDiagram.Linked_HCS_and_PR.svg[Verlinkung von PractitionerRole mit HealthcareService und HealthcareService.endpoint]
+.Datenmodell Verlinkung von Organisations-Einträgen mit Practitioner-Einträgen
+image::diagrams/ObjectDiagram.Linked_HCS_and_PR.svg[Datenmodell Verlinkung von Organisations-Einträgen mit Practitioner-Einträgen]
 
 === Umsetzung im LDAP-Directory
 
