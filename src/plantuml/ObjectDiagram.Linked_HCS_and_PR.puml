@@ -5,9 +5,9 @@ object "PractitionerRole" as pr1 #LightYellow
 object "Organization" as o1 #LightPink
 object "Location" as l1 #LightYellow
 object "Endpoint 1" as e1 #LightYellow
-object "Practitioner" as p1 #LightPink
 object "Endpoint 2" as e2
 object "Endpoint 3" as e3
+object "Practitioner" as p1 #LightPink
 
 hs1 o-- o1
 hs1 o-- l1
